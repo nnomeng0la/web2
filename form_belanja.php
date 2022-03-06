@@ -7,7 +7,7 @@
     <title>Form Belanja</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="icon" href="https://img.icons8.com/external-flatart-icons-outline-flatarticons/50/000000/external-cart-black-friday-flatart-icons-outline-flatarticons.png">
 </head>
 <body>
 <div class="row" style="padding:10px">
@@ -99,7 +99,7 @@
         echo "Nama Customer : " .$customer;
         echo "<br> Produk Pilihan : " .$produk;
         echo "<br> Jumlah Beli : " .$jumlah;
-        echo "<br> Total Belanja : Rp. " .number_format($harga,2,',','.');
+        echo "<br> Total Belanja : Rp. " .number_format($harga,0,',','.') . ",-";
         break;
       
       case 'KULKAS':
@@ -108,7 +108,7 @@
         echo "Nama Customer : " .$customer;
         echo "<br> Produk Pilihan : " .$produk;
         echo "<br> Jumlah Beli : " .$jumlah;
-        echo "<br> Total Belanja : Rp. " .number_format($harga,2,',','.');
+        echo "<br> Total Belanja : Rp. " .number_format($harga,0,',','.') . ",-";
         break;
       
       case 'MESIN CUCI':
