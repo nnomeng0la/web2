@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="https://img.icons8.com/external-flatart-icons-outline-flatarticons/50/000000/external-cart-black-friday-flatart-icons-outline-flatarticons.png">
 </head>
-<body>
-<div class="row" style="padding:10px">
+<body class="bg-info">
+<div class="row" style="padding: 15px;">
   <div class="col-8">
       <h1>Belanja Online</h1>
       <hr>
@@ -82,51 +82,48 @@
   </div>
 </div>
 <hr>
-<fieldset style="padding:10px; border: 0.1em solid black; margin-right:50%; margin-left: 10px;">
-  <legend>Data Anda</legend>
-  <div>
-    <?php
+<div style="padding:15px;">
+  <?php
 
-    $proses = $_POST["proses"];
-    $customer = $_POST["customer"];
-    $produk = $_POST["produk"];
-    $jumlah = $_POST["jumlah"];
+  $proses = $_POST["proses"];
+  $customer = $_POST["customer"];
+  $produk = $_POST["produk"];
+  $jumlah = $_POST["jumlah"];
 
-    switch ($produk) {
-      case 'TV':
-        $harga = 4200000;
-        $harga = $harga * $jumlah;
-        echo "Nama Customer : " .$customer;
-        echo "<br> Produk Pilihan : " .$produk;
-        echo "<br> Jumlah Beli : " .$jumlah;
-        echo "<br> Total Belanja : Rp. " .number_format($harga,0,',','.') . ",-";
-        break;
-      
-      case 'KULKAS':
-        $harga = 3100000;
-        $harga = $harga * $jumlah;
-        echo "Nama Customer : " .$customer;
-        echo "<br> Produk Pilihan : " .$produk;
-        echo "<br> Jumlah Beli : " .$jumlah;
-        echo "<br> Total Belanja : Rp. " .number_format($harga,0,',','.') . ",-";
-        break;
-      
-      case 'MESIN CUCI':
-        $harga = 3800000;
-        $harga = $harga * $jumlah;
-        echo "Nama Customer : " .$customer;
-        echo "<br> Produk Pilihan : " .$produk;
-        echo "<br> Jumlah Beli : " .$jumlah;
-        echo "<br> Total Belanja : Rp. " .number_format($harga,0,',','.') .",-";
-        break;
-      default:
-        # code...
-        break;
-    }
+  switch ($produk) {
+    case 'TV':
+      $harga = 4200000;
+      $harga = $harga * $jumlah;
+      echo "Nama Customer : " .$customer;
+      echo "<br> Produk Pilihan : " .$produk;
+      echo "<br> Jumlah Beli : " .$jumlah;
+      echo "<br> Total Belanja : Rp. " .number_format($harga,0,',','.') . ",-";
+      break;
+    
+    case 'KULKAS':
+      $harga = 3100000;
+      $harga = $harga * $jumlah;
+      echo "Nama Customer : " .$customer;
+      echo "<br> Produk Pilihan : " .$produk;
+      echo "<br> Jumlah Beli : " .$jumlah;
+      echo "<br> Total Belanja : Rp. " .number_format($harga,0,',','.') . ",-";
+      break;
+    
+    case 'MESIN CUCI':
+      $harga = 3800000;
+      $harga = $harga * $jumlah;
+      echo "Nama Customer : " .$customer;
+      echo "<br> Produk Pilihan : " .$produk;
+      echo "<br> Jumlah Beli : " .$jumlah;
+      echo "<br> Total Belanja : Rp. " .number_format($harga,0,',','.') .",-";
+      break;
+    default:
+      # code...
+      break;
+  }
 
-    ?>
-  </div>
-</fieldset>
+  ?>
+</div>
 
 
     
